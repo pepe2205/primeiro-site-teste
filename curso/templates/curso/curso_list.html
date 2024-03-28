@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Cursos à venda!</title>
+
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Cursos à venda!</a></h1>
+        </div>
+
+        {% for curso in cursos %}
+            <div>
+                <p>published: {{ curso.published_date }}</p>
+                <h3><a href="">{{ curso.title }}</a></h3>
+                <p>{{ curso.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
